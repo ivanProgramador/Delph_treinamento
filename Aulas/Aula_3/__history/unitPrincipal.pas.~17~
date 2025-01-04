@@ -1,0 +1,144 @@
+unit unitPrincipal;
+
+
+
+interface
+
+{Dentro da sessão uses fica a importação das classes que serão usadas dentro do côdigo}
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+{
+  aqui eu informo para o compilador o tipo dos meus componentes
+  por exemplo:
+  Na minha tela vai ter o componente  "txtResultado" porém o compilador não sabe
+  oque é isso então no côdigo abaixo eu digo a ele que  o componente " txtResultado"
+  e do tipo "TEdit" então como ele coenhece a classe "TEdit" ele entende que toda vez
+  que eu chamar um  "txtResultado" no meu côdigo eu estou falando de um "TEdit" porque
+  eu avisei isso a ele na sessão type abaixo usando a declaração:
+
+  txtResultado: TEdit;
+
+  como eu fiz com os outros componentes
+
+}
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    txtNum1: TEdit;
+    Label2: TLabel;
+    txtNum2: TEdit;
+    btSomar: TButton;
+    btSubtrair: TButton;
+    Button3: TButton;
+    btDividir: TButton;
+    Label3: TLabel;
+    txtResultado: TEdit;
+
+    {
+     Aqui eu cliquei duas vezes no botão "btnSomar" então ele declarou que o "btnSomar" tem un evento
+     de click,ventsop aqui são chamados de procedures por isso ele diz que um porcedure chamada
+     "btSomarClick" vai ser chamada quando o botão for acionado e essa porcedure recebe como parametro
+     um "sender(remetente)" que vai remeter , enviar ele para o objeto.
+
+
+     procedure btSomarClick(Sender: TObject);
+
+     o conteudo codigo executado vai aparecer na implementation
+
+
+    }
+    procedure btSomarClick(Sender: TObject);
+    procedure btSubtrairClick(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btSomarClick(Sender: TObject);
+
+{
+Na sessão var são declaradas as variáveis que serão usadas durante a execução do codigo
+as variveis delph podem ser:
+
+ Integer(inteiros),
+ Real(numeros fracionados)
+ Boolean (true ou false)
+ Char (uma unica letra)
+ Sting (textos)
+
+ }
+
+
+var
+  num1,num2,resultado : Integer;
+
+{aqui começa oque vai contecer quando eu clicar}
+begin
+
+   {
+     todos os valores necessaris vão vir atraves dos campo de texto
+     então eu preciso converter o texto que vem deles para que possa afzer um
+     calculo entre os dois
+  }
+
+
+  num1 := StrToInt(txtNum1.Text);
+  num2 := StrToInt(txtNum2.Text);
+  resultado := num1 + num2;
+
+  {
+    O resultado recebeu a soma de dois numeros inteiros
+    para mostrar essses numeros eu preciso fazer a conversão
+    novamente para string
+    porque a caixa de texto só aceita texto no retorno
+  }
+  txtResultado.Text := IntToStr(resultado);
+
+
+
+
+end;
+{aqui termina oque vai contecer quando eu clicar}
+
+
+
+
+procedure TForm1.btSubtrairClick(Sender: TObject);
+
+var
+ num1,num2,resultado : Integer;
+begin
+  num1 := StrToInt(txtNum1.Text);
+  num2 := StrToInt(txtNum2.Text);
+  resultado := num1 - num2;
+  txtResultado.Text := IntToStr(resultado);
+
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+
+var
+ num1,num2:Real;
+ resultado:Real;
+
+begin
+  num1 := StrToInt(txtNum1.Text);
+  num2 := StrToInt(txtNum2.Text);
+  resultado := num1 / num2;
+  txtResultado.Text := FloatToStr(resultado);
+
+end;
+
+end.
