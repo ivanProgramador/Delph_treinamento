@@ -1,0 +1,27 @@
+Para abrir o projeto novamente  tem que abrir o arquivo "Projeto.dproj" porque ele e a referencia do projeto para ide 
+e atravess dele que ela identifica os arquivos,componentes,estrutura e codigo fonte.
+
+dentro da pasta \Win32\Debug fica o executável gerado e compilado com base no projeto   
+
+pra ver o codigo fonte na ide 
+project / view source
+
+a ide possui a opção de visualização do design e permite e tambem que o côdigo seja visto utilizando a chave F12
+
+Mecanica de execução 
+
+O codigo delph é estruturado então existem sessões que devem ser executadas em uma ordem 
+para que funcionem 
+
+1 - program Projeto -> isso é arquivo do porjeto que da a referencia para ele começar 
+
+2 - uses -> é onde são declaradas ass classes e bibliotecas que vão ser usadas para a execcução 
+
+3 - begin -> aqui fica o codigo que vai ser executado é onde a aplicação recebe o comando de inicio
+   
+4 - end   -> aqui ele sabe que execução termina então a logica deve estar dentro de begin e end    
+ 
+ 
+
+
+ 
