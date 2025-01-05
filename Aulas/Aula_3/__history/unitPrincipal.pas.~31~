@@ -56,17 +56,9 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.btnDividirClick(Sender: TObject);
-
 begin
-
-  {evitando divisão por zero}
-
-  if txtNum2.text = '0' then
-    showMessage('Voê não pode dividir por zero')
-  else
-    calcularResultados('dividir');
+  calcularResultados('dividir');
 end;
-
 
 procedure TForm1.btnMultiplicarClick(Sender: TObject);
 begin
@@ -100,13 +92,12 @@ begin
    num1 := StrToFloat(txtNum1.Text);
    num2 := StrToFloat(txtNum2.Text);
 
-    {testando de forma procedural o paramtro recebido}
 
-    if operacao = 'somar' then
+   if operacao = 'somar' then
 
        resultado := num1 + num2;
 
-    if operacao = 'subtrair' then
+   if operacao = 'subtrair' then
 
        resultado := num1 - num2;
 
@@ -114,9 +105,13 @@ begin
 
        resultado := num1 * num2;
 
-    if operacao = 'dividir' then
+     if operacao = 'dividir' then
 
        resultado := num1 / num2;
+
+
+
+
 
 
    txtResultado.Text := FloatToStr(resultado);

@@ -56,17 +56,9 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.btnDividirClick(Sender: TObject);
-
 begin
-
-  {evitando divisão por zero}
-
-  if txtNum2.text = '0' then
-    showMessage('Voê não pode dividir por zero')
-  else
-    calcularResultados('dividir');
+  calcularResultados('dividir');
 end;
-
 
 procedure TForm1.btnMultiplicarClick(Sender: TObject);
 begin
@@ -83,43 +75,16 @@ begin
   calcularResultados('subtrair');
 end;
 
-
-{
-  Na ver~sao anterior cada botão tinha o seu porprio procedimento
-  agora com a refatoração eles vão chamar a função passando a operação
-  desejada como paramtro então a função vai devolver o resultado
-  assim eu evito repetição de côdigo
-}
-
 procedure TForm1.calcularResultados(operacao: String);
 var
   num1,num2,resultado : Real;
 
 begin
-
    num1 := StrToFloat(txtNum1.Text);
-   num2 := StrToFloat(txtNum2.Text);
+  num2 := StrToFloat(txtNum2.Text);
+  resultado := num1 + num2;
 
-    {testando de forma procedural o paramtro recebido}
-
-    if operacao = 'somar' then
-
-       resultado := num1 + num2;
-
-    if operacao = 'subtrair' then
-
-       resultado := num1 - num2;
-
-    if operacao = 'multiplicar' then
-
-       resultado := num1 * num2;
-
-    if operacao = 'dividir' then
-
-       resultado := num1 / num2;
-
-
-   txtResultado.Text := FloatToStr(resultado);
+  txtResultado.Text := FloatToStr(resultado);
 
 end;
 

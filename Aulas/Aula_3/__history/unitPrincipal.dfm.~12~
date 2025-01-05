@@ -1,85 +1,91 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 278
-  ClientWidth = 181
+  BorderStyle = bsSingle
+  Caption = 'Calculadora'
+  ClientHeight = 276
+  ClientWidth = 232
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   TextHeight = 15
   object Label1: TLabel
-    Left = 8
+    Left = 32
     Top = 38
     Width = 53
     Height = 15
     Caption = 'Numero 1'
   end
   object Label2: TLabel
-    Left = 8
+    Left = 32
     Top = 88
     Width = 53
     Height = 15
     Caption = 'Numero 2'
   end
   object Label3: TLabel
-    Left = 8
+    Left = 32
     Top = 176
     Width = 52
     Height = 15
     Caption = 'Resultado'
   end
-  object Edit1: TEdit
-    Left = 8
+  object txtNum1: TEdit
+    Left = 32
     Top = 59
     Width = 150
     Height = 23
     TabOrder = 0
   end
-  object Edit2: TEdit
-    Left = 8
+  object txtNum2: TEdit
+    Left = 32
     Top = 109
     Width = 150
     Height = 23
     TabOrder = 1
   end
-  object Button1: TButton
-    Left = 8
+  object btSomar: TButton
+    Left = 32
     Top = 144
     Width = 33
     Height = 25
     Caption = '+'
     TabOrder = 2
+    OnClick = btSomarClick
   end
-  object Button2: TButton
-    Left = 47
+  object btSubtrair: TButton
+    Left = 71
     Top = 144
     Width = 33
     Height = 25
     Caption = '-'
     TabOrder = 3
+    OnClick = btSubtrairClick
   end
-  object Button3: TButton
-    Left = 86
+  object btnMultiplicar: TButton
+    Left = 110
     Top = 144
     Width = 33
     Height = 25
     Caption = '*'
     TabOrder = 4
+    OnClick = btnMultiplicarClick
   end
-  object Button4: TButton
-    Left = 125
+  object btnDividir: TButton
+    Left = 149
     Top = 144
     Width = 33
     Height = 25
     Caption = '/'
     TabOrder = 5
+    OnClick = btnDividirClick
   end
-  object Edit3: TEdit
-    Left = 8
+  object txtResultado: TEdit
+    Left = 32
     Top = 197
     Width = 150
     Height = 23
