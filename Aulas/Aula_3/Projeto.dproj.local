@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-  <Transactions>
-    <Transaction>2025/01/04 10:44:42.390,=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/01/04 10:47:04.428,C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\unitPrincipal.dfm=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2025/01/04 10:47:04.428,C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\unitPrincipal.pas=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/01/04 10:47:46.277,C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\Projeto.dproj=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-  </Transactions>
-</BorlandProject>
