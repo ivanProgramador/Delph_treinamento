@@ -37,6 +37,7 @@ type
 
        }
       function calculaResultado(num1,num2:Real;operacao:String):Real;
+      function validarCampos():Boolean;
 
   public
 
@@ -132,6 +133,14 @@ begin
      2: TStyleManager.SetStyle('Aqua Light Slate');
   end;
 
+end;
+
+function TForm1.validarCampos: Boolean;
+begin
+    if(txtNum1.Text = '') or (txtNum2.Text ='') then
+      Result := False
+    else
+      Result := True;
 end;
 
 end.

@@ -54,6 +54,7 @@ object Form1: TForm1
     Width = 33
     Height = 25
     Caption = '+'
+    Enabled = False
     TabOrder = 2
     OnClick = btSomarClick
   end
@@ -63,6 +64,7 @@ object Form1: TForm1
     Width = 33
     Height = 25
     Caption = '-'
+    Enabled = False
     TabOrder = 3
     OnClick = btSubtrairClick
   end
@@ -72,6 +74,7 @@ object Form1: TForm1
     Width = 33
     Height = 25
     Caption = '*'
+    Enabled = False
     TabOrder = 4
     OnClick = btnMultiplicarClick
   end
@@ -81,6 +84,7 @@ object Form1: TForm1
     Width = 33
     Height = 25
     Caption = '/'
+    Enabled = False
     TabOrder = 5
     OnClick = btnDividirClick
   end
@@ -89,6 +93,7 @@ object Form1: TForm1
     Top = 197
     Width = 150
     Height = 23
+    ReadOnly = True
     TabOrder = 6
   end
   object opcVisual: TRadioGroup

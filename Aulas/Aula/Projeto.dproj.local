@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2025/01/04 10:44:42.000.390,=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/01/04 10:47:04.000.428,C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\unitPrincipal.pas</Transaction>
-    <Transaction>2025/01/04 10:47:04.000.428,C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\unitPrincipal.dfm</Transaction>
-    <Transaction>2025/01/04 10:47:46.000.277,C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\Projeto.dproj</Transaction>
+    <Transaction>2025/01/04 10:47:04.000.428,C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\unitPrincipal.dfm=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/01/04 10:47:04.000.428,C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\unitPrincipal.pas=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/04 10:47:46.000.277,C:\Users\ivan\Documents\Delph_treinamento\Aulas\Aula_3\Projeto.dproj=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
