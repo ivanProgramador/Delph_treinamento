@@ -53,16 +53,18 @@ implementation
 { TForm1 }
 
 procedure TForm1.btnDividirClick(Sender: TObject);
-begin
+   begin
+     if validarCampos then
+      begin
+          if txtNum2.Text = '0' then
 
-  if txtNum2.Text = '0' then
+           showMessage('Você não pode dividir por zero')
 
-    showMessage('Você não pode dividir por zero')
+          else
 
-  else
-
-   txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
-end;
+           txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
+      end;
+    end;
 
 procedure TForm1.btnMultiplicarClick(Sender: TObject);
 begin
@@ -142,5 +144,6 @@ begin
     else
       Result := True;
 end;
+
 
 end.

@@ -7,7 +7,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,Vcl.Styles,Vcl.Themes;
 
 
 
@@ -23,9 +23,12 @@ type
     btnDividir: TButton;
     Label3: TLabel;
     txtResultado: TEdit;
+    opcVisual: TRadioGroup;
     procedure btSomarClick(Sender: TObject);
     procedure btSubtrairClick(Sender: TObject);
     procedure btnMultiplicarClick(Sender: TObject);
+    procedure btnDividirClick(Sender: TObject);
+    procedure opcVisualClick(Sender: TObject);
   private
       {
         em uuma função no Delph depois de declarar eu tenho de dizer
@@ -34,6 +37,7 @@ type
 
        }
       function calculaResultado(num1,num2:Real;operacao:String):Real;
+      function validarCampos():Boolean;
 
   public
 
@@ -48,19 +52,37 @@ implementation
 
 { TForm1 }
 
+procedure TForm1.btnDividirClick(Sender: TObject);
+begin
+
+  if txtNum2.Text = '0' then
+
+    showMessage('Você não pode dividir por zero')
+
+  else
+
+   txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
+end;
+
 procedure TForm1.btnMultiplicarClick(Sender: TObject);
 begin
-  calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'multiplicar');
+
+  txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'multiplicar'));
+
 end;
 
 procedure TForm1.btSomarClick(Sender: TObject);
 begin
-    calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'somar');
+
+   txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'somar'));
+
 end;
 
 procedure TForm1.btSubtrairClick(Sender: TObject);
 begin
-   calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'subtrair');
+
+  txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'subtrair'));
+
 end;
 
 
@@ -94,6 +116,31 @@ begin
 
 
 
+end;
+
+procedure TForm1.opcVisualClick(Sender: TObject);
+begin
+  case opcVisual.ItemIndex of
+
+     {
+       caso eu precise executar mais de uma linha dentro do case
+       essa linhas ou logica devem ficar de ntro de um begin e de um end
+       para que o delph saiba onde começa e onde termina o case
+     }
+
+     0:TStyleManager.SetStyle('Windows');
+     1: TStyleManager.SetStyle('Glow');
+     2: TStyleManager.SetStyle('Aqua Light Slate');
+  end;
+
+end;
+
+function TForm1.validarCampos: Boolean;
+begin
+    if(txtNum1.Text = '') or (txtNum2.Text ='') then
+      Result := False
+    else
+      Result := True;
 end;
 
 end.
