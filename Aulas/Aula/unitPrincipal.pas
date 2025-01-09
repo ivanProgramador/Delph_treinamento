@@ -30,6 +30,8 @@ type
     procedure btDividirClick(Sender: TObject);
     procedure opcVisualClick(Sender: TObject);
     procedure txtNum1Change(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
       {
@@ -41,6 +43,7 @@ type
       function calculaResultado(num1,num2:Real;operacao:String):Real;
       function validarCampos():Boolean;
       procedure habilitarBotoes(habilitado: boolean);
+      procedure registrarLog(acao:String);
 
   public
 
@@ -123,6 +126,22 @@ begin
 
 end;
 
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+    registrarLog('Aplicação finalizada');
+    registrarLog('--------------------');
+
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+       registrarLog('--------------------');
+       registrarLog('Aplicação iniciada');
+end;
+
+
+
+
 procedure TForm1.habilitarBotoes(habilitado: boolean);
 begin
     btSomar.Enabled := habilitado;
@@ -148,6 +167,42 @@ begin
   end;
 
 end;
+
+
+procedure TForm1.registrarLog(acao: String);
+
+var
+ //quando eu digo que o tipo de uma avrivel é TextFile ele entende qua eu estou falando de um aruivo de texto
+ //porque se trata de uma classe nativa
+ arquivo: TextFile;
+
+begin
+   try
+     //criando o arquivo com base na variavel
+     AssignFile(arquivo,'Logs.txt');
+
+     //testando se oa ruivo ja existe se existir ele ebrea
+     if FileExists('Logs.txt') then
+        Append(arquivo)
+
+     else
+       //se não existir ele cria e abre
+        Rewrite(arquivo);
+
+        //escrevend o aruivo a data/hora taual convertida em string
+        //e concatenando ação que vem como parametro
+
+        WriteLn(arquivo,'[' + DateTimeToStr(now()) + ']' + acao );
+
+   finally
+       CloseFile(arquivo);
+
+   end;
+
+end;
+
+
+
 
 procedure TForm1.txtNum1Change(Sender: TObject);
 begin
