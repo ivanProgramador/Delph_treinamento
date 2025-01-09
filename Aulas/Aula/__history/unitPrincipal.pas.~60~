@@ -19,15 +19,15 @@ type
     txtNum2: TEdit;
     btSomar: TButton;
     btSubtrair: TButton;
-    btnMultiplicar: TButton;
-    btnDividir: TButton;
+    btMultiplicar: TButton;
+    btDividir: TButton;
     Label3: TLabel;
     txtResultado: TEdit;
     opcVisual: TRadioGroup;
     procedure btSomarClick(Sender: TObject);
     procedure btSubtrairClick(Sender: TObject);
-    procedure btnMultiplicarClick(Sender: TObject);
-    procedure btnDividirClick(Sender: TObject);
+    procedure btMultiplicarClick(Sender: TObject);
+    procedure btDividirClick(Sender: TObject);
     procedure opcVisualClick(Sender: TObject);
   private
       {
@@ -38,6 +38,7 @@ type
        }
       function calculaResultado(num1,num2:Real;operacao:String):Real;
       function validarCampos():Boolean;
+      procedure habilitarBotoes(habilitado: boolean);
 
   public
 
@@ -52,19 +53,21 @@ implementation
 
 { TForm1 }
 
-procedure TForm1.btnDividirClick(Sender: TObject);
-begin
+procedure TForm1.btDividirClick(Sender: TObject);
+   begin
+     if validarCampos then
+      begin
+          if txtNum2.Text = '0' then
 
-  if txtNum2.Text = '0' then
+           showMessage('Você não pode dividir por zero')
 
-    showMessage('Você não pode dividir por zero')
+          else
 
-  else
+           txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
+      end;
+    end;
 
-   txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
-end;
-
-procedure TForm1.btnMultiplicarClick(Sender: TObject);
+procedure TForm1.btMultiplicarClick(Sender: TObject);
 begin
 
   txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'multiplicar'));
@@ -118,6 +121,14 @@ begin
 
 end;
 
+procedure TForm1.habilitarBotoes(habilitado: boolean);
+begin
+    btSomar.Enabled := habilitado;
+    btSubtrair.Enabled := habilitado;
+    btMultiplicar.Enabled := habilitado;
+
+end;
+
 procedure TForm1.opcVisualClick(Sender: TObject);
 begin
   case opcVisual.ItemIndex of
@@ -142,5 +153,6 @@ begin
     else
       Result := True;
 end;
+
 
 end.

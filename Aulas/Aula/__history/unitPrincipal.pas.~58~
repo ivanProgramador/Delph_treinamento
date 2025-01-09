@@ -19,18 +19,16 @@ type
     txtNum2: TEdit;
     btSomar: TButton;
     btSubtrair: TButton;
-    btMultiplicar: TButton;
-    btDividir: TButton;
+    btnMultiplicar: TButton;
+    btnDividir: TButton;
     Label3: TLabel;
     txtResultado: TEdit;
     opcVisual: TRadioGroup;
     procedure btSomarClick(Sender: TObject);
     procedure btSubtrairClick(Sender: TObject);
-    procedure btMultiplicarClick(Sender: TObject);
-    procedure btDividirClick(Sender: TObject);
+    procedure btnMultiplicarClick(Sender: TObject);
+    procedure btnDividirClick(Sender: TObject);
     procedure opcVisualClick(Sender: TObject);
-    procedure txtNum1Change(Sender: TObject);
-
   private
       {
         em uuma função no Delph depois de declarar eu tenho de dizer
@@ -55,7 +53,7 @@ implementation
 
 { TForm1 }
 
-procedure TForm1.btDividirClick(Sender: TObject);
+procedure TForm1.btnDividirClick(Sender: TObject);
    begin
      if validarCampos then
       begin
@@ -127,8 +125,7 @@ procedure TForm1.habilitarBotoes(habilitado: boolean);
 begin
     btSomar.Enabled := habilitado;
     btSubtrair.Enabled := habilitado;
-    btMultiplicar.Enabled := habilitado;
-    btDividir.Enabled := habilitado;
+    btnMultiplicar.Enabled := habilitado;
 
 end;
 
@@ -149,44 +146,12 @@ begin
 
 end;
 
-procedure TForm1.txtNum1Change(Sender: TObject);
-begin
-  if validarCampos then
-    habilitarBotoes(True)
-  else
-    habilitarBotoes(false)
-end;
-
-
-
 function TForm1.validarCampos: Boolean;
 begin
     if(txtNum1.Text = '') or (txtNum2.Text ='') then
       Result := False
     else
-    {
-      Mesmo sendo uma calculadora existe a possibilidade do cliente digitar um numero
-      então preciso fazer um tratamento para que ele nãop veja que deu uma excessão
-      então estou usando o "try" o codigo dentro dele vai tentar converter a string digitada
-      em numero mas caso não sseja possivel ele vai jgar o erro pra dentro
-      da avriavel E: que vai receber a excessão de conversão e retornar false
-      caso a execessão exista então os botões vão permanecer desabilitados
-      para o cliente o sistema ignora a letra digitada nisso o sistema não
-      vai travar e vai ficar esperando um numero.
-
-    }
-      try
-        strToFloat(txtNum1.text);
-        strToFloat(txtNum2.text);
-        Result := True;
-
-        except
-          on E: EconvertError do
-            begin
-                Result := False;
-            end;
-
-      end;
+      Result := True;
 end;
 
 

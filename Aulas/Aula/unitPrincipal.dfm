@@ -40,6 +40,7 @@ object Form1: TForm1
     Width = 150
     Height = 23
     TabOrder = 0
+    OnChange = txtNum1Change
   end
   object txtNum2: TEdit
     Left = 32
@@ -47,6 +48,7 @@ object Form1: TForm1
     Width = 150
     Height = 23
     TabOrder = 1
+    OnChange = txtNum1Change
   end
   object btSomar: TButton
     Left = 32
@@ -68,7 +70,7 @@ object Form1: TForm1
     TabOrder = 3
     OnClick = btSubtrairClick
   end
-  object btnMultiplicar: TButton
+  object btMultiplicar: TButton
     Left = 110
     Top = 144
     Width = 33
@@ -76,9 +78,9 @@ object Form1: TForm1
     Caption = '*'
     Enabled = False
     TabOrder = 4
-    OnClick = btnMultiplicarClick
+    OnClick = btMultiplicarClick
   end
-  object btnDividir: TButton
+  object btDividir: TButton
     Left = 149
     Top = 144
     Width = 33
@@ -86,7 +88,7 @@ object Form1: TForm1
     Caption = '/'
     Enabled = False
     TabOrder = 5
-    OnClick = btnDividirClick
+    OnClick = btDividirClick
   end
   object txtResultado: TEdit
     Left = 32

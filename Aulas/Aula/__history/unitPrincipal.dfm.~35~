@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderStyle = bsSingle
   Caption = 'Calculadora'
-  ClientHeight = 276
+  ClientHeight = 382
   ClientWidth = 232
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -54,6 +54,7 @@ object Form1: TForm1
     Width = 33
     Height = 25
     Caption = '+'
+    Enabled = False
     TabOrder = 2
     OnClick = btSomarClick
   end
@@ -63,30 +64,50 @@ object Form1: TForm1
     Width = 33
     Height = 25
     Caption = '-'
+    Enabled = False
     TabOrder = 3
     OnClick = btSubtrairClick
   end
-  object btnMultiplicar: TButton
+  object btMultiplicar: TButton
     Left = 110
     Top = 144
     Width = 33
     Height = 25
     Caption = '*'
+    Enabled = False
     TabOrder = 4
+    OnClick = btMultiplicarClick
   end
-  object btnDividir: TButton
+  object btDividir: TButton
     Left = 149
     Top = 144
     Width = 33
     Height = 25
     Caption = '/'
+    Enabled = False
     TabOrder = 5
+    OnClick = btDividirClick
   end
   object txtResultado: TEdit
     Left = 32
     Top = 197
     Width = 150
     Height = 23
+    ReadOnly = True
     TabOrder = 6
+  end
+  object opcVisual: TRadioGroup
+    Left = 32
+    Top = 240
+    Width = 185
+    Height = 113
+    Caption = 'Mudar Visual Calculadora'
+    ItemIndex = 0
+    Items.Strings = (
+      'Windows Calssic '
+      'Glow '
+      'Aqua Light Slate')
+    TabOrder = 7
+    OnClick = opcVisualClick
   end
 end
