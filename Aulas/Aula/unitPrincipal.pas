@@ -63,34 +63,59 @@ procedure TForm1.btDividirClick(Sender: TObject);
      if validarCampos then
       begin
           if txtNum2.Text = '0' then
-
-           showMessage('Você não pode dividir por zero')
+           begin
+              showMessage('Você não pode dividir por zero');
+              registrarLog('Erro de didvisão por zero');
+           end
 
           else
 
-           txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
+           if ValidarCampos then
+              begin
+               txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'dividir'));
+               registrarLog('Dividir, num1= ' + txtNum1.Text +'num2 ='+txtNum2.Text + ' , resultado = ' + txtResultado.Text );
+           end;
       end;
     end;
+
+
+
+
+
 
 procedure TForm1.btMultiplicarClick(Sender: TObject);
 begin
 
-  txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'multiplicar'));
+   if ValidarCampos then
+    begin
+       txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'multiplicar'));
+       registrarLog('Multiplicar, num1= ' + txtNum1.Text +'num2 ='+txtNum2.Text + ' , resultado = ' + txtResultado.Text );
+     end;
 
 end;
 
 procedure TForm1.btSomarClick(Sender: TObject);
+
 begin
+  if ValidarCampos then
 
-   txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'somar'));
-
+    begin
+       txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'somar'));
+       registrarLog('Somar, num1= ' + txtNum1.Text +'num2 ='+txtNum2.Text + ' , resultado = ' + txtResultado.Text );
+     end;
 end;
+
+
+
 
 procedure TForm1.btSubtrairClick(Sender: TObject);
 begin
 
-  txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'subtrair'));
-
+  if ValidarCampos then
+    begin
+       txtResultado.Text := FloatToStr(calculaResultado(StrToFloat(txtNum1.text),StrToFloat(txtNum2.text),'subtrair'));
+       registrarLog('Subtrair, num1= ' + txtNum1.Text +'num2 ='+txtNum2.Text + ' , resultado = ' + txtResultado.Text );
+     end;
 end;
 
 
@@ -161,9 +186,22 @@ begin
        para que o delph saiba onde começa e onde termina o case
      }
 
-     0:TStyleManager.SetStyle('Windows');
-     1: TStyleManager.SetStyle('Glow');
-     2: TStyleManager.SetStyle('Aqua Light Slate');
+     0:
+      begin
+       TStyleManager.SetStyle('Windows');
+       registrarLog('Tema alterado para Windows');
+      end;
+     1:
+       begin
+        TStyleManager.SetStyle('Glow');
+        registrarLog('Tema alterado para Glow');
+      end;
+
+     2:
+       begin
+       TStyleManager.SetStyle('Aqua Light Slate');
+       registrarLog('Tema alterado para Light Slate');
+      end;
   end;
 
 end;
