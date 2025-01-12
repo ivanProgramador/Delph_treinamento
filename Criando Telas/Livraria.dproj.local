@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/01/12 17:13:46.893,=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/12 17:29:16.612,C:\Users\ivan\Documents\Delph_treinamento\Criando Telas\unitPrincipal.pas=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/12 17:29:16.612,C:\Users\ivan\Documents\Delph_treinamento\Criando Telas\unitPrincipal.dfm=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/01/12 17:29:25.156,C:\Users\ivan\Documents\Delph_treinamento\Criando Telas\Livraria.dproj=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
