@@ -18,3 +18,16 @@
 [10/01/2025 11:23:24]Tema alterado para Windows
 [10/01/2025 11:23:26]Aplicação finalizada
 [10/01/2025 11:23:26]--------------------
+[12/01/2025 16:36:35]--------------------
+[12/01/2025 16:36:35]Aplicação iniciada
+[12/01/2025 16:36:42]Somar, num1= 10num2 =5 , resultado = 15
+[12/01/2025 16:36:43]Subtrair, num1= 10num2 =5 , resultado = 5
+[12/01/2025 16:36:44]Multiplicar, num1= 10num2 =5 , resultado = 50
+[12/01/2025 16:36:44]Dividir, num1= 10num2 =5 , resultado = 2
+[12/01/2025 16:36:46]Tema alterado para Glow
+[12/01/2025 16:36:47]Tema alterado para Light Slate
+[12/01/2025 16:36:48]Tema alterado para Windows
+[12/01/2025 16:36:49]Tema alterado para Glow
+[12/01/2025 16:36:50]Tema alterado para Light Slate
+[12/01/2025 16:36:51]Aplicação finalizada
+[12/01/2025 16:36:51]--------------------
