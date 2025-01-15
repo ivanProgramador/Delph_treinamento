@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MainMenu1
+  TextHeight = 15
+  object MainMenu1: TMainMenu
+    Left = 8
+    Top = 16
+    object sistema1: TMenuItem
+      Caption = 'sistema'
+      object configuraes1: TMenuItem
+        Caption = 'configura'#231#245'es'
+        object Relatrios1: TMenuItem
+          Caption = 'Relat'#243'rios'
+        end
+        object Acessos1: TMenuItem
+          Caption = 'Acessos'
+        end
+      end
+      object Usuarios1: TMenuItem
+        Caption = 'Usuarios'
+        object Criarnovo1: TMenuItem
+          Caption = 'Criar novo'
+        end
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object sair1: TMenuItem
+        Caption = 'sair'
+      end
+    end
+    object Cadastros1: TMenuItem
+      Caption = 'Cadastros'
+    end
+    object consultas1: TMenuItem
+      Caption = 'consultas'
+    end
+  end
+end
