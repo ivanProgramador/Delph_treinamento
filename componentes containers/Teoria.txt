@@ -1,0 +1,23 @@
+Componentes contaneirs são usados para organizar 
+os sub componentes na tela de forma visual, isso possibilita a criação grupos de componentes. 
+
+no caso desse projeto eu coloquei 2
+tipos de componente container 
+
+1 - é uum Tpainel 
+
+2 - é um TGroup Box 
+
+para ver isso acontecendo tem que olhar o menu structure 
+que vai mostrar o grupo e os objetos que estão dentro deles.   
+
+Agora vamos supor que eu tenho um cadastro de clientes com muitos dados 
+e talvcez meu formulario prrecise dividido em algumas partes eu posso 
+dividir ele em abas usando componente  page control 
+cada vez qque eu precisar de uma aba nova clico com botão direito e 
+escolho a opção new page, ue vai criar uma pagina ond eu posso colocar 
+os elementos necessarios para o cliente preencher os dados  em uma aba 
+e posso colocar dados pessoas , em outra dados de endereço 
+em outra o historico dele e tudo vai caber em uma tela so porque esta 
+dividido em abas 
+garaças ao TPageControl.     
