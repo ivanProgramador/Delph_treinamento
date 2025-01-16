@@ -1,0 +1,9 @@
+Arrastando para tela o componente TMainMenu 
+eu vou ter uma componete que representa o memu principal
+da tela parra que possa confirrara ele basta clicar no componente
+ele vai dar um previa
+
+quando selecionamnos o primiero item e nomeamos ele é possivel colocar mais um item de menu 
+ao lado ou abaixo dele.
+
+     
