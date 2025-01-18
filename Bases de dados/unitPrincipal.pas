@@ -1,0 +1,52 @@
+unit unitPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.DBCtrls, Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    DBEdit2: TDBEdit;
+    DBCheckBox1: TDBCheckBox;
+    DBMemo1: TDBMemo;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBText1: TDBText;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Label6: TLabel;
+    txtBusca: TEdit;
+    procedure txtBuscaChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDm;
+
+procedure TForm1.txtBuscaChange(Sender: TObject);
+begin
+      {aqqui eu estou usandoa  função locate que vai fazer uma busca dentro da base de dados
+        conforme o conteudo dela for mudando, a abusca sera baseada no campo nome.
+        o terceiro parametro server apar que eu não precise digitar todo o nome do
+        usuario para que o reultado apareça
+       }
+      DM.tb_contatos.Locate('nome', txtBusca.Text,[loPartialKey]);
+end;
+
+end.

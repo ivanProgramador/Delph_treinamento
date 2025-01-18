@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/01/18 13:06:17.669,=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/18 13:06:57.010,C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\unitPrincipal.pas=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/18 13:06:57.010,C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\unitPrincipal.dfm=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/01/18 13:07:04.468,C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\Agenda.dproj=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/01/18 13:12:20.845,=C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\Unit1.pas</Transaction>
+    <Transaction>2025/01/18 13:23:09.951,C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\unitDm.pas=C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\Unit1.pas</Transaction>
+    <Transaction>2025/01/18 13:23:09.951,C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\unitDm.dfm=C:\Users\ivan\Documents\Delph_treinamento\Bases de dados\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

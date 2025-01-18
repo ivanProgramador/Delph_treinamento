@@ -1,0 +1,25 @@
+object DM: TDM
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=agenda'
+      'User_Name=root'
+      'Password=1234'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+  end
+  object tb_contatos: TFDTable
+    Connection = FDConnection1
+    TableName = 'agenda.contatos'
+    Left = 104
+    Top = 24
+  end
+  object DataSource1: TDataSource
+    Left = 160
+    Top = 24
+  end
+end
