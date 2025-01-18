@@ -69,7 +69,7 @@ object Form1: TForm1
     Top = 87
     Width = 684
     Height = 354
-    ActivePage = TabSheet1
+    ActivePage = TabSheet4
     Align = alBottom
     TabOrder = 1
     object TabSheet1: TTabSheet
@@ -260,25 +260,278 @@ object Form1: TForm1
         Caption = 'Cliente negativado'
         TabOrder = 12
       end
+      object Edit27: TEdit
+        Left = 0
+        Top = 199
+        Width = 121
+        Height = 23
+        TabOrder = 13
+      end
     end
     object TabSheet2: TTabSheet
       Caption = 'Dados do c'#244'njuje'
       ImageIndex = 1
+      object Label15: TLabel
+        Left = 3
+        Top = 24
+        Width = 36
+        Height = 15
+        Caption = 'Nome:'
+      end
+      object Label16: TLabel
+        Left = 3
+        Top = 124
+        Width = 111
+        Height = 15
+        Caption = 'Data de nascimento: '
+      end
+      object Label17: TLabel
+        Left = 3
+        Top = 74
+        Width = 24
+        Height = 15
+        Caption = 'CPF:'
+      end
+      object Edit13: TEdit
+        Left = 3
+        Top = 145
+        Width = 174
+        Height = 23
+        TabOrder = 0
+      end
+      object Edit14: TEdit
+        Left = 3
+        Top = 95
+        Width = 174
+        Height = 23
+        TabOrder = 1
+      end
+      object GroupBox1: TGroupBox
+        Left = 192
+        Top = 95
+        Width = 465
+        Height = 217
+        Caption = 'Contatos do c'#244'njuje'
+        TabOrder = 2
+        object Label18: TLabel
+          Left = 13
+          Top = 24
+          Width = 40
+          Height = 15
+          Caption = 'Celular:'
+        end
+        object Label19: TLabel
+          Left = 16
+          Top = 88
+          Width = 37
+          Height = 15
+          Caption = 'E-mail:'
+        end
+        object Label20: TLabel
+          Left = 224
+          Top = 27
+          Width = 59
+          Height = 15
+          Caption = 'Operadora:'
+        end
+        object Edit15: TEdit
+          Left = 13
+          Top = 45
+          Width = 121
+          Height = 23
+          TabOrder = 0
+        end
+        object Edit16: TEdit
+          Left = 16
+          Top = 109
+          Width = 353
+          Height = 23
+          TabOrder = 1
+        end
+        object ComboBox2: TComboBox
+          Left = 224
+          Top = 48
+          Width = 145
+          Height = 23
+          TabOrder = 2
+          Items.Strings = (
+            'Tim'
+            'Vivo'
+            'oi'
+            'Claro')
+        end
+      end
+      object Edit4: TEdit
+        Left = 3
+        Top = 45
+        Width = 406
+        Height = 23
+        TabOrder = 3
+      end
     end
     object TabSheet3: TTabSheet
-      Caption = 'Dados do trabalho'
+      Caption = 'Dados do trabalho:'
       ImageIndex = 2
+      object Prof: TLabel
+        Left = 16
+        Top = 16
+        Width = 51
+        Height = 15
+        Caption = 'Profiss'#227'o:'
+      end
+      object Label21: TLabel
+        Left = 16
+        Top = 80
+        Width = 48
+        Height = 15
+        Caption = 'Empresa:'
+      end
+      object Label22: TLabel
+        Left = 16
+        Top = 136
+        Width = 163
+        Height = 15
+        Caption = 'Endere'#231'o completo do tabalho'
+      end
+      object Label23: TLabel
+        Left = 16
+        Top = 200
+        Width = 107
+        Height = 15
+        Caption = 'Telefone do tabalho:'
+      end
+      object Label24: TLabel
+        Left = 208
+        Top = 200
+        Width = 104
+        Height = 15
+        Caption = 'Celular do trabalho:'
+      end
+      object Edit17: TEdit
+        Left = 16
+        Top = 101
+        Width = 433
+        Height = 23
+        TabOrder = 0
+      end
+      object Edit18: TEdit
+        Left = 16
+        Top = 157
+        Width = 433
+        Height = 23
+        TabOrder = 1
+      end
+      object Edit19: TEdit
+        Left = 16
+        Top = 221
+        Width = 121
+        Height = 23
+        TabOrder = 2
+      end
+      object Edit20: TEdit
+        Left = 208
+        Top = 221
+        Width = 241
+        Height = 23
+        TabOrder = 3
+      end
+      object Edit26: TEdit
+        Left = 16
+        Top = 37
+        Width = 433
+        Height = 23
+        TabOrder = 4
+      end
     end
     object TabSheet4: TTabSheet
       Caption = 'An'#225'lise de cr'#233'dito'
       ImageIndex = 3
+      object Label25: TLabel
+        Left = 16
+        Top = 16
+        Width = 93
+        Height = 15
+        Caption = 'Sal'#225'rio do cliente:'
+      end
+      object Label26: TLabel
+        Left = 16
+        Top = 72
+        Width = 97
+        Height = 15
+        Caption = 'Sal'#225'rio do c'#244'njuje:'
+      end
+      object Label27: TLabel
+        Left = 16
+        Top = 130
+        Width = 92
+        Height = 15
+        Caption = 'Limite de cr'#233'dito:'
+      end
+      object Label28: TLabel
+        Left = 16
+        Top = 192
+        Width = 68
+        Height = 15
+        Caption = 'Limite usado'
+      end
+      object Label29: TLabel
+        Left = 16
+        Top = 256
+        Width = 78
+        Height = 15
+        Caption = 'Limite restante'
+      end
+      object Label30: TLabel
+        Left = 375
+        Top = 16
+        Width = 68
+        Height = 15
+        Caption = 'observa'#231#245'es:'
+      end
+      object Edit21: TEdit
+        Left = 16
+        Top = 93
+        Width = 317
+        Height = 23
+        TabOrder = 0
+      end
+      object Edit22: TEdit
+        Left = 16
+        Top = 151
+        Width = 161
+        Height = 23
+        TabOrder = 1
+      end
+      object Edit23: TEdit
+        Left = 16
+        Top = 213
+        Width = 161
+        Height = 23
+        TabOrder = 2
+      end
+      object Edit24: TEdit
+        Left = 16
+        Top = 277
+        Width = 161
+        Height = 23
+        TabOrder = 3
+      end
+      object Memo1: TMemo
+        Left = 375
+        Top = 37
+        Width = 290
+        Height = 260
+        Lines.Strings = (
+          '')
+        TabOrder = 4
+      end
+      object Edit25: TEdit
+        Left = 16
+        Top = 37
+        Width = 317
+        Height = 23
+        TabOrder = 5
+      end
     end
-  end
-  object Edit4: TEdit
-    Left = 4
-    Top = 312
-    Width = 121
-    Height = 23
-    TabOrder = 2
   end
 end

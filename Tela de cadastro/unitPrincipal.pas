@@ -28,7 +28,6 @@ type
     Label5: TLabel;
     Edit3: TEdit;
     Label6: TLabel;
-    Edit4: TEdit;
     Label7: TLabel;
     Edit5: TEdit;
     Label8: TLabel;
@@ -46,6 +45,42 @@ type
     Label14: TLabel;
     Edit12: TEdit;
     CheckBox1: TCheckBox;
+    Label15: TLabel;
+    Label16: TLabel;
+    Edit13: TEdit;
+    Label17: TLabel;
+    Edit14: TEdit;
+    GroupBox1: TGroupBox;
+    Label18: TLabel;
+    Edit15: TEdit;
+    Label19: TLabel;
+    Edit16: TEdit;
+    ComboBox2: TComboBox;
+    Label20: TLabel;
+    Prof: TLabel;
+    Label21: TLabel;
+    Edit17: TEdit;
+    Label22: TLabel;
+    Edit18: TEdit;
+    Label23: TLabel;
+    Edit19: TEdit;
+    Label24: TLabel;
+    Edit20: TEdit;
+    Label25: TLabel;
+    Label26: TLabel;
+    Edit21: TEdit;
+    Label27: TLabel;
+    Edit22: TEdit;
+    Label28: TLabel;
+    Edit23: TEdit;
+    Label29: TLabel;
+    Edit24: TEdit;
+    Memo1: TMemo;
+    Label30: TLabel;
+    Edit4: TEdit;
+    Edit25: TEdit;
+    Edit26: TEdit;
+    Edit27: TEdit;
   private
     { Private declarations }
   public
