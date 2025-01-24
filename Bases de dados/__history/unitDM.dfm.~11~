@@ -1,0 +1,24 @@
+object DM: TDM
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Password=1234'
+      'User_Name=root'
+      'Database=agenda'
+      'Server=127.0.0.1'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 48
+    Top = 32
+  end
+  object FDTable1: TFDTable
+    Connection = FDConnection1
+    Left = 128
+    Top = 32
+  end
+  object DataSource1: TDataSource
+    Left = 200
+    Top = 32
+  end
+end

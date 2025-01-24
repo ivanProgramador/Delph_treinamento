@@ -1,4 +1,4 @@
-unit unitDm;
+unit unitDM;
 
 interface
 
@@ -12,15 +12,15 @@ uses
 
 type
   TDM = class(TDataModule)
-    FDConnection1: TFDConnection;
-    tb_contatos: TFDTable;
-    ds_contatos: TDataSource;
-    tb_contatosid: TFDAutoIncField;
-    tb_contatosnome: TStringField;
-    tb_contatoscelular: TStringField;
-    tb_contatosbloqueado: TShortintField;
-    tb_contatosdata: TDateTimeField;
-    tb_contatosobservacoes: TMemoField;
+    conexao: TFDConnection;
+    tbContatos: TFDTable;
+    dsContatos: TDataSource;
+    tbContatosid: TFDAutoIncField;
+    tbContatosnome: TStringField;
+    tbContatoscelular: TStringField;
+    tbContatosbloqueado: TShortintField;
+    tbContatosdata: TDateTimeField;
+    tbContatosobservacoes: TMemoField;
   private
     { Private declarations }
   public

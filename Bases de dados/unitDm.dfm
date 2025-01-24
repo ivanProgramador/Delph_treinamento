@@ -1,62 +1,63 @@
 object DM: TDM
-  Height = 322
+  Height = 480
   Width = 640
-  object FDConnection1: TFDConnection
+  object conexao: TFDConnection
     Params.Strings = (
-      'Database=agenda'
-      'User_Name=root'
       'Password=1234'
+      'User_Name=root'
+      'Database=agenda'
+      'Server=127.0.0.1'
       'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    Left = 32
-    Top = 24
+    Left = 48
+    Top = 32
   end
-  object tb_contatos: TFDTable
+  object tbContatos: TFDTable
     Active = True
     IndexFieldNames = 'id'
-    Connection = FDConnection1
+    Connection = conexao
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'agenda.contatos'
-    Left = 104
-    Top = 24
-    object tb_contatosid: TFDAutoIncField
+    Left = 128
+    Top = 32
+    object tbContatosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
       ReadOnly = False
     end
-    object tb_contatosnome: TStringField
+    object tbContatosnome: TStringField
       FieldName = 'nome'
       Origin = 'nome'
       Required = True
       Size = 50
     end
-    object tb_contatoscelular: TStringField
+    object tbContatoscelular: TStringField
       FieldName = 'celular'
       Origin = 'celular'
       Required = True
       Size = 16
     end
-    object tb_contatosbloqueado: TShortintField
+    object tbContatosbloqueado: TShortintField
       AutoGenerateValue = arDefault
       FieldName = 'bloqueado'
       Origin = 'bloqueado'
     end
-    object tb_contatosdata: TDateTimeField
+    object tbContatosdata: TDateTimeField
       AutoGenerateValue = arDefault
       FieldName = 'data'
       Origin = '`data`'
     end
-    object tb_contatosobservacoes: TMemoField
+    object tbContatosobservacoes: TMemoField
       AutoGenerateValue = arDefault
       FieldName = 'observacoes'
       Origin = 'observacoes'
       BlobType = ftMemo
     end
   end
-  object ds_contatos: TDataSource
-    DataSet = tb_contatos
-    Left = 176
-    Top = 24
+  object dsContatos: TDataSource
+    DataSet = tbContatos
+    Left = 200
+    Top = 32
   end
 end

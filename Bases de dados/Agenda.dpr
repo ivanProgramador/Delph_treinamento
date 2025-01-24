@@ -3,7 +3,7 @@ program Agenda;
 uses
   Vcl.Forms,
   unitPrincipal in 'unitPrincipal.pas' {Form1},
-  unitDm in 'unitDm.pas' {DM: TDataModule};
+  unitDM in 'unitDM.pas' {DM: TDataModule};
 
 {$R *.res}
 
