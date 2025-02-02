@@ -4,23 +4,27 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.DBCtrls, Vcl.Buttons, Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask,
+  Vcl.ExtCtrls, Data.DB, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids;
 
 type
   TForm1 = class(TForm)
     Label1: TLabel;
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBCheckBox1: TDBCheckBox;
-    DBMemo1: TDBMemo;
     Label2: TLabel;
+    DBEdit1: TDBEdit;
     Label3: TLabel;
+    DBEdit2: TDBEdit;
     Label4: TLabel;
+    DBMemo1: TDBMemo;
+    DBCheckBox1: TDBCheckBox;
     Label5: TLabel;
     DBText1: TDBText;
-    DBNavigator1: TDBNavigator;
+    Label6: TLabel;
     DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    Label7: TLabel;
+    txtBusca: TEdit;
+    procedure txtBuscaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,5 +39,10 @@ implementation
 {$R *.dfm}
 
 uses unitDM;
+
+procedure TForm1.txtBuscaChange(Sender: TObject);
+begin
+    DM.tbContatos.Locate('nome',txtBusca.Text,[loPartialKey]);
+end;
 
 end.

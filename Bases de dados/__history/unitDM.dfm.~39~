@@ -1,0 +1,15 @@
+object DM: TDM
+  Height = 291
+  Width = 640
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'Database=agenda'
+      'User_Name=root'
+      'Password=1234'
+      'Server=localhost'
+      'DriverID=MySQL')
+    Connected = True
+    Left = 48
+    Top = 16
+  end
+end

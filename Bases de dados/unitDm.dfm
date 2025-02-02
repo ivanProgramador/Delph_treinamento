@@ -1,63 +1,61 @@
 object DM: TDM
-  Height = 480
+  Height = 291
   Width = 640
-  object conexao: TFDConnection
+  object Conexao: TFDConnection
     Params.Strings = (
-      'Password=1234'
-      'User_Name=root'
       'Database=agenda'
-      'Server=127.0.0.1'
+      'User_Name=root'
+      'Password=1234'
+      'Server=localhost'
       'DriverID=MySQL')
     Connected = True
-    LoginPrompt = False
     Left = 48
-    Top = 32
+    Top = 16
   end
   object tbContatos: TFDTable
     Active = True
     IndexFieldNames = 'id'
-    Connection = conexao
+    Connection = Conexao
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'agenda.contatos'
     Left = 128
-    Top = 32
+    Top = 16
     object tbContatosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
       ReadOnly = False
     end
     object tbContatosnome: TStringField
+      AutoGenerateValue = arDefault
       FieldName = 'nome'
       Origin = 'nome'
-      Required = True
       Size = 50
     end
     object tbContatoscelular: TStringField
+      AutoGenerateValue = arDefault
       FieldName = 'celular'
       Origin = 'celular'
-      Required = True
-      Size = 16
     end
-    object tbContatosbloqueado: TShortintField
+    object tbContatosbloqueado: TBooleanField
       AutoGenerateValue = arDefault
       FieldName = 'bloqueado'
       Origin = 'bloqueado'
     end
-    object tbContatosdata: TDateTimeField
-      AutoGenerateValue = arDefault
-      FieldName = 'data'
-      Origin = '`data`'
-    end
-    object tbContatosobservacoes: TMemoField
+    object tbContatosobservacoes: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'observacoes'
       Origin = 'observacoes'
-      BlobType = ftMemo
+      Size = 150
+    end
+    object tbContatosdata_cadastro: TDateTimeField
+      AutoGenerateValue = arDefault
+      FieldName = 'data_cadastro'
+      Origin = 'data_cadastro'
     end
   end
   object dsContatos: TDataSource
     DataSet = tbContatos
-    Left = 200
-    Top = 32
+    Left = 216
+    Top = 16
   end
 end
