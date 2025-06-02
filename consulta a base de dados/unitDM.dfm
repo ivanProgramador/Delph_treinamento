@@ -1,0 +1,28 @@
+object DM: TDM
+  Height = 480
+  Width = 640
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'Database=aula'
+      'User_Name=root'
+      'Server=localhost'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 48
+    Top = 40
+  end
+  object sqlConsulta: TFDQuery
+    Active = True
+    Connection = Conexao
+    SQL.Strings = (
+      'SELECT * FROM clientes;')
+    Left = 176
+    Top = 40
+  end
+  object dsSqlConsulta: TDataSource
+    DataSet = sqlConsulta
+    Left = 288
+    Top = 40
+  end
+end

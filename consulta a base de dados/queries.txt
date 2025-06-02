@@ -1,0 +1,14 @@
+CREATE DATABASE aula;
+use aula;
+CREATE TABLE clientes(
+  id int PRIMARY KEY AUTO_INCREMENT,
+  nome varchar(60),
+  bairro varchar(60),
+  idade int(5)
+);
+
+use aula;
+INSERT INTO `clientes`(`id`, `nome`, `bairro`, `idade`) VALUES ('','Augusto','centro',33);
+INSERT INTO `clientes`(`id`, `nome`, `bairro`, `idade`) VALUES ('','Maria isabela','centro',29);
+INSERT INTO `clientes`(`id`, `nome`, `bairro`, `idade`) VALUES ('','Marcos silvva','São sebastião',20);
+INSERT INTO `clientes`(`id`, `nome`, `bairro`, `idade`) VALUES ('','João da Silva','São josé',40);
