@@ -11,12 +11,12 @@ object Form1: TForm1
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object lblConsulta: TLabel
+  object Label1: TLabel
     Left = 216
     Top = 24
-    Width = 78
+    Width = 36
     Height = 15
-    Caption = 'Digite o nome:'
+    Caption = 'Nome:'
   end
   object opcoes: TRadioGroup
     Left = 8
@@ -25,12 +25,10 @@ object Form1: TForm1
     Height = 73
     Caption = 'Op'#231'oes de consulta'
     Columns = 2
-    ItemIndex = 0
     Items.Strings = (
       'Nome'
       'Bairro')
     TabOrder = 0
-    OnClick = opcoesClick
   end
   object txtConsulta: TEdit
     Left = 216
@@ -46,7 +44,6 @@ object Form1: TForm1
     Height = 25
     Caption = 'Realizar consulta'
     TabOrder = 2
-    OnClick = btRealizarConsultaClick
   end
   object DBGrid1: TDBGrid
     Left = 8
@@ -70,23 +67,43 @@ object Form1: TForm1
       item
         Expanded = False
         FieldName = 'id'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nome'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Width = 271
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'bairro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Width = 113
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'idade'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Width = 121
         Visible = True
       end>

@@ -46,7 +46,6 @@ object Form1: TForm1
     Height = 25
     Caption = 'Realizar consulta'
     TabOrder = 2
-    OnClick = btRealizarConsultaClick
   end
   object DBGrid1: TDBGrid
     Left = 8
