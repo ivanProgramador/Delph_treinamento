@@ -46,17 +46,17 @@ begin
   if(opcoes.ItemIndex = 0) then
     begin
       //atribuindo o valor recebdido no campo ao parametro
-      DM.sqlConsulta.SQL.Add('SELECT * FROM clientes WHERE nome = :pConsulta');
+      DM.sqlConsulta.SQL.Add('SELECT * FROM clientes WHERE nome LIKE :pConsulta');
 
       //devolvendo a querie com o valor recebido
-      DM.sqlConsulta.ParamByName('pConsulta').AsString := txtConsulta.Text;
+      DM.sqlConsulta.ParamByName('pConsulta').AsString := txtConsulta.Text + '%';
     end;
 
 
   if(opcoes.ItemIndex = 1) then
     begin
-      DM.sqlConsulta.SQL.Add('SELECT * FROM clientes WHERE bairro = :pConsulta');
-      DM.sqlConsulta.ParamByName('pConsulta').AsString := txtConsulta.Text;
+      DM.sqlConsulta.SQL.Add('SELECT * FROM clientes WHERE bairro LIKE :pConsulta');
+      DM.sqlConsulta.ParamByName('pConsulta').AsString := txtConsulta.Text + '%';
     end;
 
 
