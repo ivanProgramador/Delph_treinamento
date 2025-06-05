@@ -1,0 +1,84 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Caixas de mensagem'
+  ClientHeight = 275
+  ClientWidth = 406
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Button1: TButton
+    Left = 24
+    Top = 32
+    Width = 121
+    Height = 25
+    Caption = 'Mensagem simples'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 24
+    Top = 80
+    Width = 121
+    Height = 25
+    Caption = 'Alerta'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 24
+    Top = 136
+    Width = 121
+    Height = 25
+    Caption = 'Informa'#231#227'o'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 248
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'Erro'
+    TabOrder = 3
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 24
+    Top = 192
+    Width = 75
+    Height = 25
+    Caption = 'Pergunta'
+    TabOrder = 4
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 248
+    Top = 192
+    Width = 75
+    Height = 25
+    Caption = 'ok'
+    TabOrder = 5
+  end
+  object Button7: TButton
+    Left = 248
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'ok /cancelar'
+    TabOrder = 6
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 248
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = 'sim /n'#227'o'
+    TabOrder = 7
+  end
+end
