@@ -1,0 +1,51 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Condicional'
+  ClientHeight = 190
+  ClientWidth = 253
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 24
+    Top = 24
+    Width = 43
+    Height = 15
+    Caption = 'Usu'#225'rio:'
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 74
+    Width = 35
+    Height = 15
+    Caption = 'Senha:'
+  end
+  object txtUsuario: TEdit
+    Left = 24
+    Top = 45
+    Width = 193
+    Height = 23
+    TabOrder = 0
+  end
+  object txtSenha: TEdit
+    Left = 24
+    Top = 93
+    Width = 193
+    Height = 23
+    TabOrder = 1
+  end
+  object btLogin: TButton
+    Left = 24
+    Top = 145
+    Width = 193
+    Height = 25
+    Caption = 'Login'
+    TabOrder = 2
+    OnClick = btLoginClick
+  end
+end
