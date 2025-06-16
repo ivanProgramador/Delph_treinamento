@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/06/15 23:23:59.990,=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/06/15 23:25:16.140,C:\temp\Delph_treinamento\Controle de estoque\unitPrincipal.dfm=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/06/15 23:25:16.140,C:\temp\Delph_treinamento\Controle de estoque\unitPrincipal.pas=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/06/15 23:25:25.592,C:\temp\Delph_treinamento\Controle de estoque\Estoque.dproj=C:\Users\ivan\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/06/15 23:27:19.581,=C:\temp\Delph_treinamento\Controle de estoque\Unit1.pas</Transaction>
+    <Transaction>2025/06/15 23:28:42.165,C:\temp\Delph_treinamento\Controle de estoque\unitCadProduto.pas=C:\temp\Delph_treinamento\Controle de estoque\Unit1.pas</Transaction>
+    <Transaction>2025/06/15 23:28:42.165,C:\temp\Delph_treinamento\Controle de estoque\unitCadProduto.dfm=C:\temp\Delph_treinamento\Controle de estoque\Unit1.dfm</Transaction>
+    <Transaction>2025/06/15 23:28:48.711,=C:\temp\Delph_treinamento\Controle de estoque\Unit2.pas</Transaction>
+    <Transaction>2025/06/15 23:29:10.686,C:\temp\Delph_treinamento\Controle de estoque\uniCadMovimentacao.pas=C:\temp\Delph_treinamento\Controle de estoque\Unit2.pas</Transaction>
+    <Transaction>2025/06/15 23:29:10.686,C:\temp\Delph_treinamento\Controle de estoque\uniCadMovimentacao.dfm=C:\temp\Delph_treinamento\Controle de estoque\Unit2.dfm</Transaction>
+    <Transaction>2025/06/15 23:31:32.976,=C:\temp\Delph_treinamento\Controle de estoque\Unit2.pas</Transaction>
+    <Transaction>2025/06/15 23:32:48.705,C:\temp\Delph_treinamento\Controle de estoque\unitConsMovimentacao.pas=C:\temp\Delph_treinamento\Controle de estoque\Unit2.pas</Transaction>
+    <Transaction>2025/06/15 23:32:48.705,C:\temp\Delph_treinamento\Controle de estoque\unitConsMovimentacao.dfm=C:\temp\Delph_treinamento\Controle de estoque\Unit2.dfm</Transaction>
+    <Transaction>2025/06/15 23:33:16.968,=C:\temp\Delph_treinamento\Controle de estoque\Unit1.pas</Transaction>
+    <Transaction>2025/06/15 23:33:51.527,C:\temp\Delph_treinamento\Controle de estoque\unitDM.pas=C:\temp\Delph_treinamento\Controle de estoque\Unit1.pas</Transaction>
+    <Transaction>2025/06/15 23:33:51.527,C:\temp\Delph_treinamento\Controle de estoque\unitDM.dfm=C:\temp\Delph_treinamento\Controle de estoque\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
