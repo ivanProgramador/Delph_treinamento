@@ -1,0 +1,51 @@
+unit uniCadMovimentacao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
+  Vcl.DBCtrls,unitDM, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
+
+type
+  TformCadMovimentacao = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    dataHora: TDBEdit;
+    Label3: TLabel;
+    DBEdit2: TDBEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBMemo1: TDBMemo;
+    DBComboBox1: TDBComboBox;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formCadMovimentacao: TformCadMovimentacao;
+
+implementation
+
+{$R *.dfm}
+
+
+
+
+procedure TformCadMovimentacao.DBNavigator1Click(Sender: TObject;
+  Button: TNavigateBtn);
+begin
+   //O campo data hora deve ser preenchi com a adata e hora do servidor
+   if Button = nbInsert then
+     begin
+       DM.tbMovimentacoes.FieldByName('dataHora').value := now;
+     end;
+
+end;
+
+end.

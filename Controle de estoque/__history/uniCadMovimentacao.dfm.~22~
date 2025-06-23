@@ -1,0 +1,193 @@
+object formCadMovimentacao: TformCadMovimentacao
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Cadastro de movimentacao'
+  ClientHeight = 366
+  ClientWidth = 762
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 254
+    Height = 30
+    Caption = 'Gerenciar Movimenta'#231#245'es'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 67
+    Width = 161
+    Height = 21
+    Caption = 'Tipo da movimenta'#231#227'o:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 123
+    Width = 83
+    Height = 21
+    Caption = 'Data e hora:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 179
+    Width = 90
+    Height = 21
+    Caption = 'Responsavel:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 243
+    Width = 92
+    Height = 21
+    Caption = 'Observa'#231#245'es:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object dataHora: TDBEdit
+    Left = 8
+    Top = 144
+    Width = 145
+    Height = 29
+    DataField = 'data_hora'
+    DataSource = DM.dsMovimentacoes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 8
+    Top = 200
+    Width = 145
+    Height = 29
+    DataField = 'responsavel'
+    DataSource = DM.dsMovimentacoes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBMemo1: TDBMemo
+    Left = 8
+    Top = 264
+    Width = 185
+    Height = 89
+    DataField = 'observacoes'
+    DataSource = DM.dsMovimentacoes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 8
+    Top = 94
+    Width = 145
+    Height = 29
+    DataField = 'tipo'
+    DataSource = DM.dsMovimentacoes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 280
+    Top = 15
+    Width = 352
+    Height = 25
+    DataSource = DM.dsMovimentacoes
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbPost, nbCancel]
+    TabOrder = 4
+    OnClick = DBNavigator1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 287
+    Top = 67
+    Width = 345
+    Height = 251
+    DataSource = DM.dsMovimentacoes
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'tipo'
+        Title.Caption = 'TIPO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'data_hora'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        Title.Caption = 'DATA E HORA'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'responsavel'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        Title.Caption = 'RESPONSAVEL'
+        Visible = True
+      end>
+  end
+end
