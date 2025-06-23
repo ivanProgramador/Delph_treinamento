@@ -5,7 +5,7 @@ object formCadMovimentacao: TformCadMovimentacao
   BorderStyle = bsSingle
   Caption = 'Cadastro de movimentacao'
   ClientHeight = 366
-  ClientWidth = 762
+  ClientWidth = 893
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -78,6 +78,46 @@ object formCadMovimentacao: TformCadMovimentacao
     Font.Style = []
     ParentFont = False
   end
+  object Label6: TLabel
+    Left = 592
+    Top = 36
+    Width = 215
+    Height = 21
+    Caption = 'Produtos da movimenta'#231#227'o:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 592
+    Top = 108
+    Width = 46
+    Height = 15
+    Caption = 'Produto:'
+  end
+  object Label8: TLabel
+    Left = 768
+    Top = 108
+    Width = 65
+    Height = 15
+    Caption = 'Quantidade:'
+  end
+  object Label9: TLabel
+    Left = 592
+    Top = 330
+    Width = 116
+    Height = 15
+    Caption = 'total de produtos: 50'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object dataHora: TDBEdit
     Left = 8
     Top = 144
@@ -142,9 +182,9 @@ object formCadMovimentacao: TformCadMovimentacao
     TabOrder = 3
   end
   object DBNavigator1: TDBNavigator
-    Left = 273
+    Left = 248
     Top = 63
-    Width = 352
+    Width = 328
     Height = 25
     DataSource = DM.dsMovimentacoes
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbPost, nbCancel]
@@ -152,10 +192,10 @@ object formCadMovimentacao: TformCadMovimentacao
     OnClick = DBNavigator1Click
   end
   object DBGrid1: TDBGrid
-    Left = 273
+    Left = 248
     Top = 94
-    Width = 352
-    Height = 251
+    Width = 329
+    Height = 259
     DataSource = DM.dsMovimentacoes
     TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET
@@ -168,6 +208,7 @@ object formCadMovimentacao: TformCadMovimentacao
         Expanded = False
         FieldName = 'tipo'
         Title.Caption = 'TIPO'
+        Width = 119
         Visible = True
       end
       item
@@ -179,6 +220,7 @@ object formCadMovimentacao: TformCadMovimentacao
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         Title.Caption = 'DATA E HORA'
+        Width = 127
         Visible = True
       end
       item
@@ -192,5 +234,64 @@ object formCadMovimentacao: TformCadMovimentacao
         Title.Caption = 'RESPONSAVEL'
         Visible = True
       end>
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 592
+    Top = 67
+    Width = 248
+    Height = 25
+    DataSource = DM.dsMovProduto
+    VisibleButtons = [nbLast, nbInsert, nbDelete, nbPost]
+    TabOrder = 6
+  end
+  object DBGrid2: TDBGrid
+    Left = 592
+    Top = 158
+    Width = 248
+    Height = 153
+    DataSource = DM.dsMovProduto
+    ReadOnly = True
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nomeProduto'
+        Title.Caption = 'NOME PRODUTO'
+        Width = 121
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'qtd'
+        Title.Caption = 'QUANTIDADE'
+        Width = 110
+        Visible = True
+      end>
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 592
+    Top = 129
+    Width = 145
+    Height = 23
+    DataField = 'idProduto'
+    DataSource = DM.dsMovProduto
+    KeyField = 'id'
+    ListField = 'nome'
+    ListSource = DM.dsProdutos
+    TabOrder = 8
+  end
+  object DBEdit1: TDBEdit
+    Left = 768
+    Top = 129
+    Width = 72
+    Height = 23
+    DataField = 'qtd'
+    DataSource = DM.dsMovProduto
+    TabOrder = 9
   end
 end

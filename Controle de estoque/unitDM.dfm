@@ -70,12 +70,44 @@ object DM: TDM
   end
   object tbMovProduto: TFDTable
     Active = True
-    IndexFieldNames = 'id'
+    IndexName = 'idMovimentacao'
+    MasterSource = dsMovimentacoes
+    MasterFields = 'id'
     Connection = conexao
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'estoque.movimentacoes_produtos'
     Left = 32
     Top = 176
+    object tbMovProdutoid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ReadOnly = False
+    end
+    object tbMovProdutoidMovimentacao: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idMovimentacao'
+      Origin = 'idMovimentacao'
+    end
+    object tbMovProdutoidProduto: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idProduto'
+      Origin = 'idProduto'
+    end
+    object tbMovProdutoqtd: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'qtd'
+      Origin = 'qtd'
+    end
+    object tbMovProdutonomeProduto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nomeProduto'
+      LookupDataSet = tbProdutos
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'id'
+      Size = 50
+      Lookup = True
+    end
   end
   object dsMovProduto: TDataSource
     DataSet = tbMovProduto
